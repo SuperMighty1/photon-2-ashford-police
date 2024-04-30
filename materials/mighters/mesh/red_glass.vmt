@@ -1,0 +1,24 @@
+"Refract"
+{
+	"$model" 1
+	"$refractamount" "0.01"
+	"$refracttint" "{255 255 255}"
+	"$refracttinttexture" "sentry/19tahoe/lights"
+	"$dudvmap" "sentry/19tahoe/lights_nm"
+	"$normalmap" "sentry/19tahoe/lights_nm"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.15 0.15 0.15]"
+	"$carpenisenabled" "1"
+                 "$nowritez" 1
+	"Proxies"
+	{
+		"Equals"
+		{
+			srcVar1 $carpenisenabled
+			resultVar	$color
+		}
+	}
+}
+
+
+
