@@ -1,9 +1,9 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
 
-VEHICLE.Title 		= "2018 Kitsune County Tahoe"
+VEHICLE.Title 		= "Kitsune Tahoe"
 VEHICLE.Vehicle		= "19tahoe_sgm"
-VEHICLE.Category 	= "Photon 2"
+VEHICLE.Category 	= "Photon 2: Kitsune County"
 VEHICLE.Author		= "SuperMighty"
 
 VEHICLE.SubMaterials = {
@@ -24,7 +24,7 @@ VEHICLE.Equipment = {
 				Option = "Standard Lighting",
 				VirtualComponents = {
 					{
-						Component = "photon_standard_sgmtahoe",
+						Component = "mighty_standard_sgmtahoe",
 					}
 				}
 			}
@@ -46,7 +46,7 @@ VEHICLE.Equipment = {
 				},
 				Components = {
 					{
-						Component = "photon_libertyii_kitsune",
+						Component = "photon_mighty_libertyii",
 						Position = Vector( 0, -10, 89.5 ),
 						Angles = Angle( 1, 90, 0 ),
 						Scale = 1,
@@ -64,7 +64,7 @@ VEHICLE.Equipment = {
 						Scale = 1,
 					},
 					{
-						Component = "photon_kitsune_ion_blank",
+						Component = "photon_mighty_ion_blank",
 						Position = Vector( 11.4, 5.5, 32),
 						Angles = Angle( 2.5, 62, 5 ),
 						Scale = 1,
@@ -73,7 +73,7 @@ VEHICLE.Equipment = {
 						Phase = "D",
 					},
 					{
-						Component = "photon_kitsune_ion_blank",
+						Component = "photon_mighty_ion_blank",
 						Position = Vector( 11.4, -5.5, 32),
 						Angles = Angle( -2, 116, 5 ),
 						Scale = 1,
@@ -82,7 +82,7 @@ VEHICLE.Equipment = {
 						Phase = "C",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( -41.7, 41, 15 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1,
@@ -90,7 +90,7 @@ VEHICLE.Equipment = {
 						Phase = "D",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( -41.7, -34, 15 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1,
@@ -98,7 +98,7 @@ VEHICLE.Equipment = {
 						Phase = "D",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( -41.7, -94, 62.7 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1,
@@ -106,7 +106,7 @@ VEHICLE.Equipment = {
 						Phase = "D",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( 41.7, 41, 15 ),
 						Angles = Angle( 0, -90, 0 ),
 						Scale = 1,
@@ -114,7 +114,7 @@ VEHICLE.Equipment = {
 						Phase = "C",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( 41.7, -34, 15 ),
 						Angles = Angle( 0, -90, 0 ),
 						Scale = 1,
@@ -122,7 +122,7 @@ VEHICLE.Equipment = {
 						Phase = "C",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( 41.7, -94, 62.7 ),
 						Angles = Angle( 0, -90, 0 ),
 						Scale = 1,
@@ -140,7 +140,7 @@ VEHICLE.Equipment = {
 				Option = "Whelen Dominator",
 				Components = {
 					{
-						Component = "photon_sena_whelen_dominator_8",
+						Component = "photon_mighty_dominator8",
 						Position = Vector( 0, -106.8, 77.5 ),
 						Angles = Angle( 0, 0, 0 ),
 						StateMap = "[A] 1 2 3 4 5 6 7 8",
@@ -160,7 +160,7 @@ VEHICLE.Equipment = {
 						--Phase = "C",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( 13.6, -54.2, 20 ),
 						Angles = Angle( 90, 0, 180 ),
 						Scale = 1,
@@ -169,7 +169,7 @@ VEHICLE.Equipment = {
 						Phase = "C",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( 13.6, -54.2, -20 ),
 						Angles = Angle( 90, 0, 180 ),
 						Scale = 1,
@@ -214,7 +214,7 @@ VEHICLE.Equipment = {
 				},
 				Components = {
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( -14, 123.6, 51.2 ),
 						Angles = Angle( 0, 0, 0),
 						Scale = 1.03,
@@ -222,7 +222,7 @@ VEHICLE.Equipment = {
 						Phase = "D",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( 14, 123.6, 51.2 ),
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1.03,
@@ -257,7 +257,7 @@ VEHICLE.Equipment = {
 				Option = "OuterEdge",
 				Components = {
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( -34.8, -113, 77 ),
 						Angles = Angle( 72, -180, 0 ),
 						Scale = 1,
@@ -265,14 +265,14 @@ VEHICLE.Equipment = {
 						Phase = "D",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( 34.8, -113, 77 ),
 						Angles = Angle( -72, -180, 0 ),
 						Scale = 1,
 						Phase = "C",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( -36.5, -116.2, 71.1 ),
 						Angles = Angle( 72, -180, 0 ),
 						Scale = 1,
@@ -280,14 +280,14 @@ VEHICLE.Equipment = {
 						Phase = "D",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( 36.5, -116.2, 71.1 ),
 						Angles = Angle( -72, -180, 0 ),
 						Scale = 1,
 						Phase = "C",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( -38, -118.7, 65 ),
 						Angles = Angle( 75, -180, 0 ),
 						Scale = 1,
@@ -295,7 +295,7 @@ VEHICLE.Equipment = {
 						Phase = "D",
 					},
 					{
-						Component = "photon_kitsune_ion",
+						Component = "photon_mighty_ion",
 						Position = Vector( 38, -118.7, 65 ),
 						Angles = Angle( -75, -180, 0 ),
 						Scale = 1,
