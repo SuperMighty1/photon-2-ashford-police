@@ -28,11 +28,11 @@ COMPONENT.Templates = {
     },
     ["2D"] = {
 		Running = {
-			Width = 0.7,
-			Height = 0.7,
+			Width = 1,
+			Height = 1,
 			Detail = PhotonMaterial.GenerateLightQuad("photon/lights/bulb_detail.png").MaterialName,
 			Shape = PhotonMaterial.GenerateLightQuad("photon/lights/bulb_shape.png").MaterialName,
-			Scale = 0.35
+			Scale = 0.2
 		}
 	},
     ["Projected"] = {
@@ -45,6 +45,14 @@ COMPONENT.Templates = {
 			IntensityGainFactor = 12,
 			IntensityLossFactor = 6,
 			DeactivationState = "OFF",
+		},
+	},
+    ["DynamicLight"] = {
+		Dynamic = {
+			Brightness = 1,
+			Size = 30,
+			InnerAngle = 0,
+			OuterAngle = 0,
 		}
 	},
 }
@@ -80,6 +88,12 @@ COMPONENT.ElementStates = {
             IntensityLoss = 60,
 			IntensityTransitions = true,
 		},
+        ["~SW2"] = {
+			Inherit = "R",
+			Intensity = 1,
+            IntensityLoss = 1,
+			IntensityTransitions = true,
+		},
     },
 }
 COMPONENT.Elements = {
@@ -105,9 +119,14 @@ COMPONENT.Elements = {
     [17] = { "Projected", Vector( -34, 50, 41 ), Angle( 0, 0, 0 ),},
     [18] = { "Projected", Vector( 34, 50, 41 ), Angle( 0, 0, 0 ), },
 
+    [19] = { "Mesh_static", Vector( -105.3,  -86.6, 0 ), Angle( 90, 90, 0 ), "mighters/mesh/8", DrawMaterial = "photon/common/glow_gradient_a", BoneParent = "trunk" },
+    [20] = { "Mesh_static", Vector( -105.3,  -86.6, 0 ), Angle( 90, 90, 0 ), "mighters/mesh/7", DrawMaterial = "photon/common/glow_gradient_a", BoneParent = "trunk" },
+    [21] = { "Dynamic", Vector( 19.55, -34.7, 7.9 ), Angle( 0, 0, 0 ), BoneParent = "trunk" },
+    [22] = { "Dynamic", Vector( 19.55, -34.7, -7.9 ), Angle( 0, 0, 0 ), BoneParent = "trunk" },
+
 }
 
-COMPONENT.StateMap = "[~R] 1 2 [R] 3 4 5 6 7 [SW] 8 9 12 13 [A] 10 11 [W] 14 [~SW] 15 16 17 18"
+COMPONENT.StateMap = "[~R] 1 2 [R] 3 4 5 6 7 [SW] 8 9 12 13 [A] 10 11 [W] 14 [~SW] 15 16 17 18 19 20 [SW] 21 22"
  
 local sequence = Photon2.SequenceBuilder.New
 
@@ -268,6 +287,16 @@ COMPONENT.Segments = {
           --  ON =  sequence():DoubleFlash( 1, 0):Hold(1):DoubleFlash( 2, 0):Hold(1),
          }
      },
+     ["PlateLights"] = {
+        Frames = {
+            [1] = "19 20 21 22" --"19 20 21",
+        },
+        Sequences = {
+            ON = {
+                1
+            },
+        }
+    },
 }
 
 COMPONENT.Inputs = {
@@ -275,12 +304,14 @@ COMPONENT.Inputs = {
        ["PARKING"] = {
         Tail_Right = "ON",
         Tail_Left = "ON",
+        PlateLights = "ON",
        },
        ["HEADLIGHTS"] = {
         Tail_Right = "ON",
         Tail_Left = "ON",
         Low_Beam_Left = "ON",
         Low_Beam_Right = "ON",
+        PlateLights = "ON",
       -- DRL = "ON", --kinda wank so i dont like it 
        },
        ["DRL"] = {
