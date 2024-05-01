@@ -97,8 +97,8 @@ COMPONENT.ElementStates = {
     },
 }
 COMPONENT.Elements = {
-    [1] = { "Mesh_static", Vector( 0, -0, 0 ), Angle( 0, 0, 0 ), "mighters/mesh/9", DrawMaterial = "sentry/19tahoe/tail_on", BloomMaterial = "sentry/19tahoe/tail_on", },
-    [2] = { "Mesh_static", Vector( 0, -0, 0 ), Angle( 0, 0, 0 ), "mighters/mesh/10", DrawMaterial = "sentry/19tahoe/tail_on", BloomMaterial = "sentry/19tahoe/tail_on", },
+    [1] = { "Mesh_static", Vector( 0, -0.1, 0 ), Angle( 0, 0, 0 ), "mighters/mesh/9", DrawMaterial = "sentry/19tahoe/tail_on", BloomMaterial = "sentry/19tahoe/tail_on", },
+    [2] = { "Mesh_static", Vector( 0, -0.1, 0 ), Angle( 0, 0, 0 ), "mighters/mesh/10", DrawMaterial = "sentry/19tahoe/tail_on", BloomMaterial = "sentry/19tahoe/tail_on", },
     [3] = { "Mesh_static", Vector( 0, -0.1, 0 ), Angle( 0, 0, 0 ), "mighters/mesh/13", DrawMaterial = "photon/common/glow_gradient_a", },
     [4] = { "Mesh_static", Vector( 0, -0.1, 0 ), Angle( 0, 0, 0 ), "mighters/mesh/14", DrawMaterial = "photon/common/glow_gradient_a", },
     [5] = { "Mesh_static", Vector( -105.3,  -86.6, 0 ), Angle( 90, 90, 0 ), "mighters/mesh/12", DrawMaterial = "photon/common/glow_gradient_a", BoneParent = "trunk" },
