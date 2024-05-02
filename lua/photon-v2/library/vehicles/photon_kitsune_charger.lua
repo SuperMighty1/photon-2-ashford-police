@@ -7,7 +7,7 @@ VEHICLE.Category 	= "Photon 2: Kitsune County"
 VEHICLE.Author		= "SuperMighty"
 
 VEHICLE.SubMaterials = {
-	
+	[4] = "mighters/liveries/2015_kitsune_charger",
 }
 
 VEHICLE.Siren = {
@@ -29,7 +29,7 @@ VEHICLE.Equipment = {
 		},
     },
     {
-		Catezgory = "Body",
+		Category = "Body",
 		Options ={
 			{
 				Option = "Lighting",
@@ -46,4 +46,127 @@ VEHICLE.Equipment = {
 			}
 		} 
 	},
+	{
+		Category = "Pushbar",
+		Options ={
+			{
+				Option = "Whelen Ion",
+                BodyGroups = {
+					{ BodyGroup = "Pushbar", Value = 3 }
+				},
+				Components = {
+					{
+						Component = "photon_mighty_ion",
+						Position = Vector( -10, 124, 40.7 ),
+						Angles = Angle( 0, 0, 0),
+						Scale = 1,
+						StateMap = "[R] 1 2",
+						Phase = "D",
+					},
+					{
+						Component = "photon_mighty_ion",
+						Position = Vector( 10, 124, 40.7 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+						StateMap = "[B] 1 2",
+						Phase = "C",
+					},
+				}
+			}
+		}
+	},
+	{
+		Category = "Bodygroups",
+		Options = {
+			{
+				Option = "Disable",
+                BodyGroups = {
+					{ BodyGroup = "badge", Value = 2 },
+					{ BodyGroup = "wheels_front", Value = 2 },
+					{ BodyGroup = "wheels_rear", Value = 2 },
+				}
+			}
+		}
+	},
+	{
+		Category = "Misc",
+		Options ={
+			{
+				Option = "Grille",
+                Props = {
+				},
+				Components = {
+					{
+						Component = "photon_sena_police_siren",
+						Position = Vector( 0, 110, 17.8 ),
+						Angles = Angle( 0, 0, 0 ),
+						Siren = "whelen_epsilon",
+					}
+				}
+			}
+		}
+	},
+	{
+		Category = "Rear",
+		Options ={
+			{
+				Option = "Whelen Dominator",
+				Components = {
+					{
+						Component = "photon_mighty_dominator8",
+						Position = Vector( 0, -85.5, 58.6 ),
+						Angles = Angle( 180, 0, 0 ),
+						StateMap = "[A] 1 2 3 4 5 6 7 8",
+						Scale = 1,
+						Inputs = {
+							["Emergency.Directional"] = {
+								["RIGHT"] = { ALL = "LEFT" },
+								["CENOUT"] = { ALL = "CENOUT" },
+								["LEFT"] = { ALL = "RIGHT" },
+							},
+						},
+					},
+					{
+						Component = "photon_kitsune_plate2",
+						Position = Vector( 0, -125, 28.5 ),
+						Angles = Angle( -10.15, -90, 0 ),
+						Scale = 1,
+						Bones = {
+							["bone003"] = { Vector(0, 0, 0), Angle(0, 0, 0), 1 },
+							["bone004"] = { Vector(0, -0, 0), Angle(0, 0, 0), 1 },
+						},
+					},
+				},
+				Props = {
+					{
+						Name = "@rear_plate",
+						Model = "models/xenosprops/jp_plate/jp_plate.mdl",
+						Position = Vector( 0, -126.8, 30 ),
+						Angles = Angle( -10.15, -90, 0 ),
+						Scale = 0.95,
+						SubMaterials = {
+							[0] = "mighters/liveries/kitsune_plate",
+						},
+					},
+					{
+						Name = "@front_plate",
+						Model = "models/xenosprops/jp_plate/jp_plate.mdl",
+						Scale = 0.95,
+						Position = Vector( 0, 123.6, 22.12 ),
+						Angles = Angle( 2, 90, 0 ),
+                        SubMaterials = {
+							[0] = "mighters/liveries/kitsune_plate",
+						},
+					},
+				}
+			}
+		}
+	},
+}
+
+VEHICLE.Schema = {
+    ["Emergency.Warning"] = {
+        { Label = "PRIMARY" },
+        { Mode = "MODE3", Label = "RESPONSE" },
+    },
 }
