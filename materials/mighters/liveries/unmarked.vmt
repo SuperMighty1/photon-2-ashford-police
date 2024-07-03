@@ -1,0 +1,36 @@
+"VertexlitGeneric"
+{
+	
+                "$basetexture" "mighters/liveries/unmarked_tahoe"
+	"$bumpmap" "models/supermighty/shared/skin_nm"
+                 "$alphatest" 	"1"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.3 0.3 0.3]"
+	"$envmapfresnel" "1"
+
+	"$phong" "1" 
+	"$phongboost" "15" 
+	"$phongexponent" 3
+	"$phongfresnelranges" "[0.22 0.2 2]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "2"
+	"$rimlightboost" "1"
+	"$rimmask" "1"
+
+	"$phongexponenttexture" "photon/liveries/sena_police/exp"
+	"$phongalbedotint" "1"
+
+	"$colorfix" "{255 255 255}"
+	"Proxies"
+	{
+		"Equals"
+		{
+			srcVar1 $colorfix
+			resultVar	$color
+		}
+	}
+}
+
+
+

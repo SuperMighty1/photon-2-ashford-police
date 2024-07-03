@@ -1,5 +1,6 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
+local sequence = Photon2.SequenceBuilder.New
 
 VEHICLE.Title 		= "Kitsune Charger"
 VEHICLE.Vehicle		= "15charger_fm2_sgm"
@@ -23,7 +24,22 @@ VEHICLE.Equipment = {
 				VirtualComponents = {
 					{
 						Component = "mighty_standard_15charger",
-					}
+						Segments = {
+							["DRL_Rear"] = {
+								Sequences = {
+									PARK =  sequence():Steady(1, 20):Blink( 1, 3):Steady(1, 20),
+								},
+					        },
+						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["PARK"] = { DRL_Rear = "PARK" },
+							}
+						},
+						Flags = {
+							ParkMode = { "Emergency.Warning", "PARK" },
+						}
+					},
 				}
 			}
 		},
@@ -45,6 +61,28 @@ VEHICLE.Equipment = {
 				}
 			}
 		} 
+	},
+	{
+		Category = "Spotlights",
+		Options ={
+			{
+				Option = "Spotlights",
+				Components = {
+					{
+						Component = "photon_whe_par46_left",
+						Position = Vector( -35.4, 31, 56 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+					{
+						Component = "photon_whe_par46_right",
+						Position = Vector( 35.4, 31, 56 ),
+						Angles = Angle( 0, 0, 0 ),
+						Scale = 1,
+					},
+				},
+			}
+		}
 	},
 	{
 		Category = "Pushbar",
@@ -135,6 +173,17 @@ VEHICLE.Equipment = {
 							["bone003"] = { Vector(0, 0, 0), Angle(0, 0, 0), 1 },
 							["bone004"] = { Vector(0, -0, 0), Angle(0, 0, 0), 1 },
 						},
+						Inputs = {
+							["Emergency.Warning"] = {
+								["PARK"] = { PARK ="PARK2", },
+							},
+							["Vehicle.Brake"] = {
+								["BRAKE"] = "ON",
+							},
+						},
+						Flags = {
+							ParkMode = { "Emergency.Warning", "PARK" },
+						}
 					},
 				},
 				Props = {

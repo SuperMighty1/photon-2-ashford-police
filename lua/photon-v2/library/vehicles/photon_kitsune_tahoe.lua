@@ -18,7 +18,7 @@ VEHICLE.Siren = {
 
 VEHICLE.Equipment = {
 	{
-		Category = "Standard",
+		Category = "Standard Vehicle Lighting",
 		Options ={
 			{
 				Option = "Standard Lighting",
@@ -31,10 +31,10 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Catezgory = "Body",
+		Category = "Lightbar",
 		Options ={
 			{
-				Option = "Lighting",
+				Option = "Lightbar",
 				Props = {
 					{
 						Name = "Strap",
@@ -51,6 +51,16 @@ VEHICLE.Equipment = {
 						Angles = Angle( 1, 90, 0 ),
 						Scale = 1,
 					},
+				},
+			},
+		},	
+	},
+	{
+		Category = "Spotlights",
+		Options ={
+			{
+				Option = "Spotlights",
+				Components = {
 					{
 						Component = "photon_whe_par46_left",
 						Position = Vector( -37, 38, 70 ),
@@ -63,6 +73,16 @@ VEHICLE.Equipment = {
 						Angles = Angle( 0, 0, 0 ),
 						Scale = 1,
 					},
+				},
+			}
+		}
+	},
+	{
+		Category = "Mirror Lights",
+		Options ={
+			{
+				Option = "Ions",
+				Components = {
 					{
 						Component = "photon_mighty_ion_blank",
 						Position = Vector( 11.4, 5.5, 32),
@@ -81,6 +101,42 @@ VEHICLE.Equipment = {
 						FollowBone = "door_fl",
 						Phase = "C",
 					},
+				},
+			}
+		}
+	},
+	{
+		Category = "Rear Side Window",
+		Options ={
+			{
+				Option = "Ions",
+				Components = {
+					{
+						Component = "photon_mighty_ion",
+						Position = Vector( -41.7, -94, 62.7 ),
+						Angles = Angle( 0, 90, 0 ),
+						Scale = 1,
+						StateMap = "[R] 1 2",
+						Phase = "D",
+					},
+					{
+						Component = "photon_mighty_ion",
+						Position = Vector( 41.7, -94, 62.7 ),
+						Angles = Angle( 0, -90, 0 ),
+						Scale = 1,
+						StateMap = "[B] 1 2",
+						Phase = "C",
+					},
+				},
+			}
+		}
+	},
+	{
+		Category = "Skirt Lighting",
+		Options ={
+			{
+				Option = "Ions",
+				Components = {
 					{
 						Component = "photon_mighty_ion",
 						Position = Vector( -41.7, 41, 15 ),
@@ -92,14 +148,6 @@ VEHICLE.Equipment = {
 					{
 						Component = "photon_mighty_ion",
 						Position = Vector( -41.7, -34, 15 ),
-						Angles = Angle( 0, 90, 0 ),
-						Scale = 1,
-						StateMap = "[R] 1 2",
-						Phase = "D",
-					},
-					{
-						Component = "photon_mighty_ion",
-						Position = Vector( -41.7, -94, 62.7 ),
 						Angles = Angle( 0, 90, 0 ),
 						Scale = 1,
 						StateMap = "[R] 1 2",
@@ -121,20 +169,12 @@ VEHICLE.Equipment = {
 						StateMap = "[B] 1 2",
 						Phase = "C",
 					},
-					{
-						Component = "photon_mighty_ion",
-						Position = Vector( 41.7, -94, 62.7 ),
-						Angles = Angle( 0, -90, 0 ),
-						Scale = 1,
-						StateMap = "[B] 1 2",
-						Phase = "C",
-					},
-				}
+				},
 			}
-		} 
+		}
 	},
 	{
-		Category = "Rear",
+		Category = "Rear Trunk Lighting",
 		Options ={
 			{
 				Option = "Whelen Dominator",
@@ -234,23 +274,6 @@ VEHICLE.Equipment = {
 		}
 	},
 	{
-		Category = "Bodygroups",
-		Options ={
-			{
-				Option = "Disable",
-                BodyGroups = {
-					{ BodyGroup = "pushbar", Value = 1 },
-					{ BodyGroup = "windowbars", Value = 1 },
-					{ BodyGroup = "partition", Value = 1 },
-					{ BodyGroup = "ions", Value = 1 },
-					{ BodyGroup = "lightbar", Value = 1 },
-					{ BodyGroup = "dominator", Value = 1 },
-					{ BodyGroup = "mirrors", Value = 0 },
-				},
-			}
-		}
-	},
-	{
 		Category = "OuterEdge",
 		Options ={
 			{
@@ -311,6 +334,23 @@ VEHICLE.Equipment = {
 						Scale = 1
 					}
 				}
+			}
+		}
+	},
+	{
+		Category = "Bodygroups",
+		Options ={
+			{
+				Option = "Disable",
+                BodyGroups = {
+					{ BodyGroup = "pushbar", Value = 1 },
+					{ BodyGroup = "windowbars", Value = 1 },
+					{ BodyGroup = "partition", Value = 1 },
+					{ BodyGroup = "ions", Value = 1 },
+					{ BodyGroup = "lightbar", Value = 1 },
+					{ BodyGroup = "dominator", Value = 1 },
+					{ BodyGroup = "mirrors", Value = 0 },
+				},
 			}
 		}
 	},
