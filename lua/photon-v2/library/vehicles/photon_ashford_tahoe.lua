@@ -1,13 +1,13 @@
 if (Photon2.ReloadVehicleFile()) then return end
 local VEHICLE = Photon2.LibraryVehicle()
 
-VEHICLE.Title 		= "Kitsune Tahoe"
+VEHICLE.Title 		= "Ashford Tahoe"
 VEHICLE.Vehicle		= "19tahoe_sgm"
-VEHICLE.Category 	= "Photon 2: Kitsune County"
+VEHICLE.Category 	= "Photon 2: Ashford Police"
 VEHICLE.Author		= "SuperMighty"
 
 VEHICLE.SubMaterials = {
-	[21] = "mighters/liveries/ashford_tahoe",
+	[21] = "mighters/liveries/ashford_tahoe_patrol",
 }
 
 VEHICLE.Siren = {
@@ -243,7 +243,7 @@ VEHICLE.Equipment = {
 						Scale = 1,
 						FollowBone = "trunk",
 						SubMaterials = {
-							[1] = "mighters/liveries/plate/plate_k92",
+							[1] = "mighters/liveries/plate/plate_tahoe_regular",
 						},
 					},
 				}
